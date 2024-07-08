@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resolved Ticket Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Resolved Ticket Analysis</h1>
+            <h2>Total Resolved Tickets: {{ total_resolved_tickets }}</h2>
+            <div class="chart-container">
+                {{ charts['action_required_by_chart_resolved']|safe }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Ticket Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="home">
+    <div class="background">
+        <div class="container">
+            <h1>Ticket Analysis</h1>
+            <form method="post" enctype="multipart/form-data">
+                <div class="file-upload-box">
+                    <label class="file-upload">
+                        <input type="file" name="resolved_file" onchange="this.form.submit();">
+                        Choose Resolved Tickets File
+                    </label>
+                </div>
+                <div class="file-upload-box">
+                    <label class="file-upload">
+                        <input type="file" name="in_progress_file" onchange="this.form.submit();">
+                        Choose In Progress Tickets File
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

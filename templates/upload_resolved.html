@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Resolved Tickets</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Upload Resolved Tickets</h1>
+            <form method="post" enctype="multipart/form-data">
+                <div class="file-upload-box">
+                    <label class="file-upload">
+                        <input type="file" name="file_resolved" required onchange="this.form.submit();">
+                        Choose Resolved Tickets File
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

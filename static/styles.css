@@ -1,0 +1,233 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center; /* Center align text */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"],
+input[type="number"],
+select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select {
+    appearance: none; /* Remove default dropdown arrow */
+    background: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:hover, input[type="number"]:hover {
+    border-color: #888;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Chart container styles */
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center the chart container */
+}
+
+.chart {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+}
+
+.chart-container .chart {
+    max-width: 100%;  /* Adjust the max width to control the width of the chart */
+}
+
+.chart-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the bar chart container */
+    margin: 20px 0;
+}
+
+.chart-bar-container h2, .chart h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.chart-bar-container .chart-bar {
+    width: 80%;  /* Adjust the width to ensure it's centered and sized appropriately */
+}
+
+/* Logo */
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px; /* Adjust the width as needed */
+    margin-bottom: 20px;
+}
+
+/* File upload button style */
+input[type="file"] {
+    display: none;
+}
+
+.file-upload {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.file-upload:hover {
+    background-color: #0056b3;
+}
+
+/* Information section styles */
+.info {
+    margin: 20px 0;
+}
+
+.info p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Pop-up styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 80%;
+}
+
+.popup h2 {
+    margin-top: 0;
+}
+
+.popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.popup table, .popup th, .popup td {
+    border: 1px solid #ddd;
+}
+
+.popup th, .popup td {
+    padding: 8px;
+    text-align: left;
+}
+
+.popup th {
+    background-color: #f4f4f4;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Home page specific styles */
+body.home {
+    background: url('{{ url_for('static', filename='ANDASH.gif') }}') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.home .container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align text */
+}
+
+.home .file-upload-box {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
