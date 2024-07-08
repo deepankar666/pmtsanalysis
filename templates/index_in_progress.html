@@ -6,6 +6,7 @@
 </head>
 <body>
     <div class="background">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
         <div class="container">
             <h1>In Progress Ticket Analysis</h1>
             <h2>Total In Progress Tickets: {{ total_in_progress_tickets }}</h2>
