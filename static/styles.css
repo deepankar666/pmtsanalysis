@@ -213,21 +213,23 @@ input[type="file"] {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Home page specific styles */
 body.home {
-    background: url('{{ url_for('static', filename='ANDASH.gif') }}') no-repeat center center fixed;
-    background-size: cover;
+    background: url('../static/ANDASH.gif') no-repeat center center fixed;
+    background-size: 80%; /* Adjust the size as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background color */
 }
 
 .home .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the container */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center align text */
 }
+
 
 .home .file-upload-box {
     margin: 20px 0;
     width: 100%;
     text-align: center;
 }
+
