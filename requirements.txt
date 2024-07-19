@@ -185,7 +185,7 @@ PyMsgBox==1.0.9
 pynput==1.7.6
 pyparsing==3.0.9
 pyperclip==1.8.2
-pypiwin32==223
+pypiwin32==223; sys_platform == 'win32'
 PyRect==0.2.0
 pyrsistent==0.19.3
 PyScreeze==0.1.28
@@ -198,8 +198,9 @@ pyttsx3==2.90
 pytweening==1.0.4
 pytz==2023.3.post1
 pywhatkit==3.8
-pywin32-ctypes==0.2.2
-pywinpty==2.0.10
+pywin32==305; sys_platform == 'win32'
+pywin32-ctypes==0.2.2; sys_platform == 'win32'
+pywinpty==2.0.10; sys_platform == 'win32'
 PyYAML==6.0
 pyzmq==25.0.0
 qtconsole==5.4.0
@@ -278,7 +279,7 @@ Werkzeug==2.2.2
 whichcraft==0.6.1
 widgetsnbextension==4.0.5
 wikipedia==1.4.0
-WMI==1.5.1
+WMI==1.5.1; sys_platform == 'win32'
 wrapt==1.14.1
 wsproto==1.2.0
 yapf==0.40.2
