@@ -5,9 +5,10 @@ services:
     buildCommand: |
       curl https://sh.rustup.rs -sSf | sh -s -- -y
       source $HOME/.cargo/env
+      pip install --upgrade pip
       pip install -r requirements.txt
     startCommand: flask run
-    pythonVersion: 3.10
+    pythonVersion: 3.10  # Ensure this is a version compatible with tensorflow-intel
     envVars:
       - key: CARGO_HOME
         value: /tmp/cargo
