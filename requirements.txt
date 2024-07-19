@@ -239,8 +239,8 @@ tb-nightly==2.16.0a20240107
 tenacity==8.4.2
 tensorboard==2.15.1
 tensorboard-data-server==0.7.2
-tensorflow==2.10.0  # Ensure this version is compatible with your Python version
-tensorflow-estimator==2.10.0
+#tensorflow==2.10.0  # Commented out TensorFlow since it's not required
+#tensorflow-estimator==2.10.0  # Commented out TensorFlow estimator
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.2.0
 terminado==0.17.1
