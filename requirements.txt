@@ -265,7 +265,6 @@ Werkzeug==2.2.2
 whichcraft==0.6.1
 widgetsnbextension==4.0.5
 wikipedia==1.4.0
-WMI==1.5.1
 wrapt==1.14.1
 wsproto==1.2.0
 yapf==0.40.2
