@@ -3,6 +3,7 @@
 <head>
     <title>Resolved Ticket Analysis</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="background">
@@ -10,10 +11,31 @@
         <div class="container">
             <h1>Resolved Ticket Analysis</h1>
             <h2>Total Resolved Tickets: {{ total_resolved_tickets }}</h2>
-            <div class="chart-container">
+            <button id="consultant-filter">SAP Consultant</button>
+            <div class="chart-container" id="chart-container">
                 {{ charts['action_required_by_chart_resolved']|safe }}
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('#consultant-filter').click(function(){
+                $.ajax({
+                    type: 'POST',
+                    url: "{{ url_for('get_filtered_data') }}",
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        data_type: 'resolved'
+                    }),
+                    success: function(response) {
+                        $('#chart-container').html(response.chart);
+                    },
+                    error: function(response) {
+                        alert(response.responseJSON.error);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
